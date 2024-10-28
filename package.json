@@ -1,0 +1,36 @@
+{
+  "name": "@iivanov/omnistudio-utils",
+  "version": "1.0.41",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "export-omni": "vlocity -sfdx.username fsc-sample -job export.yaml packExport",
+    "deploy-omni": "vlocity -sfdx.username fsc-sample -job deploy.yaml packDeploy",
+    "build": "webpack",
+    "prepublishOnly": "npm run build && chmod +x dist/cli.js"
+  },
+  "bin": {
+    "omnistudio-command-exec": "dist/cli.js"
+  },
+  "author": "Ivelin Ivanov",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "description": "OmniStudio CLI to allow renaming components and updating references.",
+  "devDependencies": {
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
+    "babel-loader": "^9.2.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": []
+}

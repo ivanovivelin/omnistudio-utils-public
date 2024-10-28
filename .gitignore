@@ -1,0 +1,13 @@
+vlocity-temp
+vlocity
+*.yaml
+VlocityBuildLog.yaml
+VlocityBuildErrors.yaml
+node_modules
+.vscode
+.sfdx
+omniUtils
+bin
+package-lock.json
+VlocityBuildErrors.log
+index.js
